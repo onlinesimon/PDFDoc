@@ -1,34 +1,34 @@
 <%
 
-'// AUTHOR:	Simon Beal (onlinesimon@outlook.com)'
-'//	LAST UPDATE: 2021-06-24 / CREATED: 2018-09-17'
+'// AUTHOR: Simon Beal'
+'// LAST UPDATE: 2021-06-24 / CREATED: 2018-09-17'
 
 '// VERSION: 1.0.2
 
 '// REQUIRES: 	_inc\adovbs.inc'
 
-'// USAGE: 							FUNCTIONS: 
-'// 	dim PDF 						.Image file, x, y, width
+'// USAGE: 					FUNCTIONS: 
+'// 	dim PDF 				.Image file, x, y, width
 '// 	set PDF = new PDFDoc 			.StartTransform
-'// 	PDF.Open 						->	.Rotate angle, x, y
+'// 	PDF.Open 				->	.Rotate angle, x, y
 '// 	PDF.Text x, y, text 			->	.Skew angle, x, y
-'// 	PDF.Close 						.EndTransform
-'// 	PDF.Publish 					.Box x, y, width, style
-'// 									.Line x,y, x2, y2
-'// 									.SetFont font, style, size'
-'// 									.Bold true/false'
-'// 									.SetFontSize n
-'// 									.SetTextColour r,g,b
-'// 									.SetDrawColour r,g,b
-'// 									.Orientation = "PORTRAIT/LANDSCAPE"'
-'// 									.Format = "A3/A4/A5/LEGAL/LETTER/BARCODE"'
-'// 									.AddPage
-'// 									.Code39 x, y, width, text'
-'// 									.Font.GetWidth(text)'
-'// 									.Paragraph(text, width, line-height)'
-'// 									.Centered = True/False'
+'// 	PDF.Close 				.EndTransform
+'// 	PDF.Publish 				.Box x, y, width, style
+'// 						.Line x,y, x2, y2
+'// 						.SetFont font, style, size'
+'// 						.Bold true/false'
+'// 						.SetFontSize n
+'// 						.SetTextColour r,g,b
+'// 						.SetDrawColour r,g,b
+'// 						.Orientation = "PORTRAIT/LANDSCAPE"'
+'// 						.Format = "A3/A4/A5/LEGAL/LETTER/BARCODE"'
+'// 						.AddPage
+'// 						.Code39 x, y, width, text'
+'// 						.Font.GetWidth(text)'
+'// 						.Paragraph(text, width, line-height)'
+'// 						.Centered = True/False'
 
-'// KNOWN ISSUE: 	UTF8 PAGES CAUSE ISSUE WITH ISO-8897- IMAGE'
+'// KNOWN ISSUE: UTF8 PAGES CAUSE ISSUE WITH ISO-8897- IMAGE'
 
 class PDFDoc
 
