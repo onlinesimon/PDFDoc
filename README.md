@@ -117,7 +117,7 @@ PDF.EndTransform
 PDF.Box x, y, width, style
 PDF.Line x, y, x2, y2
 PDF.SetFont font, style, size
-PDF.Bold true/false
+PDF.Bold true '// or false
 PDF.SetFontSize n
 PDF.SetTextColour r,g,b
 PDF.SetDrawColour r,g,b
