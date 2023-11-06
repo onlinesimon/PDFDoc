@@ -3,7 +3,9 @@
 
 Include the class at the beginning of your code:
 
-<code><! -- #include virtual="/_inc/_class/_newPDF.asp" -- ></code><br>
+```
+<! -- #include virtual="/_inc/_class/_newPDF.asp" -- >
+```
 (Note the added space character between the "! –" and "-- >", these spaces will need removing in your code.)
 
 Initialise PDF document class: 
