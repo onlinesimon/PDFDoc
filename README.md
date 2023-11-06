@@ -4,7 +4,7 @@
 Include the class at the beginning of your code:
 
 ```vbnet
-<!-- #include virtual="/_inc/_class/_newPDF.asp" -->
+<!-- #include virtual="/PDFDoc.asp" -->
 ```
 
 Initialise PDF document class: 
