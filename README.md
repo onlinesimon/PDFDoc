@@ -3,7 +3,7 @@
 
 Include the class at the beginning of your code:
 
-<code><! -- #include virtual="/_inc/_class/_newPDF.asp" -- ></code>
+<code><! -- #include virtual="/_inc/_class/_newPDF.asp" -- ></code><br>
 (Note the added space character between the "! –" and "-- >", these spaces will need removing in your code.)
 
 Initialise PDF document class: 
@@ -13,12 +13,12 @@ Set PDF = New PDFDoc</code>
 
 Set page size: 
 
-<code>PDF.Format = "A4"</code>
+<code>PDF.Format = "A4"</code><br>
 (Available sizes: A5, A4, A3, A2, LETTER, LEGAL.)
 
 Set page orientation: 
 
-<code>PDF.Orientation = "PORTRAIT"</code>
+<code>PDF.Orientation = "PORTRAIT"</code><br>
 (Available orientations: PORTRAIT, LANDSCAPE.)
 
 Create document:
@@ -101,6 +101,6 @@ n = PDF.Font.GetWidth(text)
 PDF.Paragraph(text, width, line-height)
 PDF.Centered = true/false</code>
 
-KNOWN ISSUE: 
+KNOWN ISSUE: <br>
 UTF8 PAGES CAUSE ISSUE WITH ISO-8897- IMAGE
 
