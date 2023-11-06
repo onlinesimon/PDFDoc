@@ -23,14 +23,14 @@ PDF.Format = "A4"
 
 Set page orientation: 
 
-```
+```vbnet
 PDF.Orientation = "PORTRAIT"
 ```
 (Available orientations: PORTRAIT, LANDSCAPE.)
 
 Create document:
 
-```
+```vbnet
 PDF.Open
 PDF.Title = "Page title"
 PDF.Creator = "Website or company name"
@@ -39,19 +39,19 @@ PDF.Author = "Name"
 
 Set font, font size and colour: 
 
-```
+```vbnet
 PDF.SetFont "Arial","",8
 ```
 
 Set draw colour (RGB): 
 
-```
+```vbnet
 PDF.SetDrawColour 150,150,150
 ```
 
 Get page dimensions: 
 
-```
+```vbnet
 Dim x, y
 x = PDF.Page.Width
 y = PDF.Page.Height
@@ -59,7 +59,7 @@ y = PDF.Page.Height
 
 Get width of a string of text: 
 
-```
+```vbnet
 Dim text, width
 text = "Hello, world!"
 width = PDF.Font.GetWidth(text)
@@ -67,13 +67,13 @@ width = PDF.Font.GetWidth(text)
 
 Write text centered on page: 
 
-```
+```vbnet
 PDF.Text (PDF.Page.Width / 2) – (width / 2), PDF.Page.Height / 2, text
 ```
 
 Example of drawing graphics: 
 
-```
+```vbnet
 Dim x1,y1,x2,y2
 x1 = 10
 y1 = 10
@@ -85,13 +85,13 @@ PDF.Line x1, y1, x2, y2
 
 Add a new page to document: 
 
-```
+```vbnet
 PDF.AddPage
 ```
 
 Draw a barcode: 
 
-```
+```vbnet
 x = 50
 y = 100
 width = 50
@@ -101,14 +101,14 @@ Page.Code39 x, y, width, text
 
 Close and publish the PDF document: 
 
-```
+```vbnet
 PDF.Close
 PDF.Publish
 ```
 
 Other available functions within this class include: 
 
-```
+```vbnet
 PDF.Image fiile, x, y, width
 PDF.StartTransform
 PDF.Rotate angle, x, y
