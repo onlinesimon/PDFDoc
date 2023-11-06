@@ -3,20 +3,20 @@
 
 Include the class at the beginning of your code:
 
-```
+```vbnet
 <!-- #include virtual="/_inc/_class/_newPDF.asp" -->
 ```
 
 Initialise PDF document class: 
 
-```
+```vbnet
 Dim PDF
 Set PDF = New PDFDoc
 ```
 
 Set page size: 
 
-```
+```vbnet
 PDF.Format = "A4"
 ```
 (Available sizes: A5, A4, A3, A2, LETTER, LEGAL.)
