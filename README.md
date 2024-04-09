@@ -99,17 +99,31 @@ text = "ABC12345"
 Page.Code39 x, y, width, text
 ```
 
-Close and publish the PDF document: 
+Close and publish the PDF document: (PDF will open in your browser to view.)
 
 ```vbnet
 PDF.Close
 PDF.Publish
 ```
 
+Alternatively, an example of how to save the PDF to your server: 
+
+```vbnet
+'// SAVE PDF'
+
+dim FileWrite
+FileWrite = Server.MapPath("/folder/Filename.pdf")
+
+PDF.Output FileWrite
+
+PDF.Close
+set PDF = nothing
+```
+
 Other available functions within this class include: 
 
 ```vbnet
-PDF.Image fiile, x, y, width
+PDF.Image file, x, y, width
 PDF.StartTransform
 PDF.Rotate angle, x, y
 PDF.Skew angle, x, y
