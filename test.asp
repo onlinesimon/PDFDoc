@@ -13,7 +13,7 @@ PDF.Title = "Test page"
 PDF.Creator = "PDFDoc"
 PDF.Author = "Simon Beal"
 
-PDF.SetFont = "Arial","",8
+PDF.SetFont "Arial","",8
 PDF.SetDrawColour 150,150,150
 
 dim x,y
