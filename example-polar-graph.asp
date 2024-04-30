@@ -34,6 +34,7 @@ select case PDF.Orientation
 		maxRadius = PDF.Page.Height
 end select
 
+dim r
 for r = sizeR to x - GapR step sizeR
 	PDF.Ellipse x,y,r,r,"D"
 next
