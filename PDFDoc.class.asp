@@ -1,11 +1,11 @@
 <%
 
 '// AUTHOR: Simon Beal'
-'// LAST UPDATE: 2021-06-24 / CREATED: 2018-09-17'
+'// LAST UPDATE: 2024-11-15 / CREATED: 2018-09-17'
 
-'// VERSION: 1.0.2
+'// VERSION: 1.0.3
 
-'// REQUIRES: 	_inc\adovbs.inc'
+'// REQUIRES: \adovbs.inc'
 
 '// USAGE: 					FUNCTIONS: 
 '// 	dim PDF 				.Image file, x, y, width
@@ -36,6 +36,7 @@ class PDFDoc
 	public Pages(99)
 	public State
 	public Title
+	public Filename
 	public Author
 	public Keywords
 	public Creator
@@ -218,12 +219,12 @@ class PDFDoc
 
 	end sub
 
-	public sub PublishAsFile(byval Filename)
+	public sub PublishAsFile(byval File)
 
 		'// OUTPUTS TEXT NOT BINARY / WILL NOT WORK'
 
 		dim TempFile
-		TempFile = replace(Filename, ".pdf", ".tmp")
+		TempFile = replace(File, ".pdf", ".tmp")
 
 		Const adTypeBinary = 1
 		Const adTypeText = 2
@@ -401,6 +402,7 @@ class PDFDoc
 
 		if not ToSave = true then
 			Response.ContentType = "application/pdf"
+			Response.AddHeader "Content-Disposition", "inline; filename=" & Filename & ".pdf"
 		end if
 
 		if CurrentPage = 0 then AddPage
@@ -1815,7 +1817,7 @@ class PDF_Image
 	public ObjNumber(99)
 	public Images(99)
 
-	public function Open(byval Filename)
+	public function Open(byval File)
 
 		Open = false
 		call Reset
@@ -1825,17 +1827,17 @@ class PDF_Image
 		Buffer.CharSet = "ISO-8859-1"
 		Buffer.Type = 2 'adTypeText '(2)'
 		Buffer.Open
-		Buffer.LoadFromFile(Server.MapPath(Filename))
+		Buffer.LoadFromFile(Server.MapPath(File))
 		Buffer.Position = 0
 
 		Size = Buffer.Size
 
 		dim i
 
-		if len(Filename) > 0 then
+		if len(File) > 0 then
 
-			i = instrrev(Filename,".")
-			if i > 0 then Extension = lcase(mid(Filename,i + 1))
+			i = instrrev(File,".")
+			if i > 0 then Extension = lcase(mid(File,i + 1))
 
 		end if
 
