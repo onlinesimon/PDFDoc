@@ -35,6 +35,7 @@ PDF.Open
 PDF.Title = "Page title"
 PDF.Creator = "Website or company name"
 PDF.Author = "Name"
+PDF.Filename = "Your_File_Name"
 ```
 
 Set font, font size and colour: 
